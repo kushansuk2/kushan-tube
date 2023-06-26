@@ -15,7 +15,7 @@ const VideoContainer = () => {
     }, []);
     return (
         <div className=" flex flex-row flex-wrap justify-evenly">
-            {videos.map((info) => {
+            {videos?.map((info) => {
                 return <VideoCard info={info}/>
             })}
         </div>
