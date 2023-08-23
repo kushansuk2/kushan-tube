@@ -24,7 +24,7 @@ function nFormatter(num, digits) {
 }
 
 const VideoCard = ({ info }) => {
-    console.log(info);
+    // console.log(info);
     const thumbnailImage = info?.snippet?.thumbnails?.high?.url;
     const title = info?.snippet?.title;
     const channelTitle = info?.snippet?.channelTitle;
@@ -45,9 +45,8 @@ const VideoCard = ({ info }) => {
                     </li>
                     <li>{channelTitle}</li>
                     <li>
-                        <ul className="flex flex-row gap-7 list-disc">
-                            <li className="list-none">{nFormatter(views,0)} Views</li>
-                            <li>{fromNow}</li>
+                        <ul className="flex flex-row gap-1 list-disc items-center">
+                           <div> {nFormatter(views,0)} Views</div><div className="text-sm">•</div><div>{fromNow}</div>
                         </ul>
                          </li>
                 </ul>

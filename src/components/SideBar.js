@@ -19,16 +19,19 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
     const isSideBarOpen = useSelector((store) => store.app.isSideBarOpen);
     if (!isSideBarOpen) return null;
     return (
-        <div className="w-52 fixed h-screen overflow-auto ml-2 left-0 bg-white">
+        <div className="w-52 fixed h-screen overflow-auto pl-2 left-0 bg-white z-50">
             <ul className="flex flex-col gap-4 px-2 pb-2">
-                <li className="flex flex-row gap-4 pt-2">
-                    <Home /> <div>Home</div>
-                </li>
+                <Link to="/">
+                    <li className="flex flex-row gap-4 pt-2">
+                        <Home /> <div>Home</div>
+                    </li>
+                </Link>
                 <li className="flex flex-row gap-4">
                     <Tag /> <div>Shorts</div>
                 </li>

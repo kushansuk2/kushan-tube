@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryList from "./CategoryList";
 import VideoContainer from "./VideoContainer";
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 const MainContainer = () => {
     const isSideBarOpen = useSelector((store) => store.app.isSideBarOpen);
